@@ -3,15 +3,15 @@ pragma solidity ^0.5.0;
 contract DVideo {
   uint public videoCount = 0;
   string public name = "DVideo";
-  mapping(uint => Video) public videos;
-
+  mapping(uint => Video) public videos; //store video
+//1.Model Video
   struct Video {
     uint id;
     string hash;
     string title;
     address author;
   }
-
+//Create Event
   event VideoUploaded(
     uint id,
     string hash,
